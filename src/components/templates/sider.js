@@ -21,8 +21,20 @@ const items = [
     
 ];
 
-const Sider_Component = () => {
+
+
+const Sider_Component = ( ) => {
+   
     const [collapsed, setCollapsed] = useState(false);
+    const handleClickMenu = (i) => {
+      if(i.key === "1"){
+          window.location.pathname = '/todo_list'
+      }else if (i.key === "2"){
+          window.location.pathname = '/fetch_data'
+      }
+      
+  }
+
     return (
         <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
         <div
@@ -32,7 +44,7 @@ const Sider_Component = () => {
             background: 'rgba(255, 255, 255, 0.2)',
           }}
         />
-        <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
+        <Menu theme="dark" mode="inline" items={items} onClick={(i) => handleClickMenu(i)}/>
       </Sider>
     )
 }
