@@ -1,8 +1,15 @@
-import Main from './components/main'
+import {BrowserRouter,
+  Routes,
+  Route} from 'react-router-dom';
+import Todolist from './components/todolist';
 
-function App() {
+const  App = () => {
   return (
-    <Main />
+    <BrowserRouter>
+    <Routes>
+      <Route path="/todo_list" element={<Todolist />} />
+    </Routes>
+  </BrowserRouter>
   );
 }
 
