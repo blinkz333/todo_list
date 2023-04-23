@@ -9,7 +9,13 @@ import Footer from './templates/footer'
 import Sider from './templates/sider'
 import Axios from 'axios'
 
+import styles from './fetchdata.module.css'
+
 const { Content } = Layout;
+
+
+
+
 
 const Fetch_Data = () => {
 
@@ -51,19 +57,19 @@ const Fetch_Data = () => {
           const summaryAddress = generateAddress(dep_data[items])
 
 
-            dep_data[items].male = countMale
-            dep_data[items].female = countFemale
-            dep_data[items].ageRange = `${minAge.age}-${maxAge.age}`
-            dep_data[items].ageMode = modeAge
-            dep_data[items].hair = summaryHair
-            dep_data[items].addressUser = summaryAddress
-            dep_data[items].splice(0,dep_data[items].length)
-            
-            department.push({[Object.keys(dep_data)[index]]: dep_data[items]})
+            const newObj = {[Object.keys(dep_data)[index]] : { 
+                male : countMale , 
+                female : countFemale , 
+                ageRange:`${minAge.age}-${maxAge.age}`,
+                ageMode : modeAge,
+                hair : summaryHair,
+                addressUser : summaryAddress
+            }};
+            department.push(newObj)
           
             
       })
-
+      console.log("department :" ,department)
       setData(department)
     }
 
@@ -105,6 +111,8 @@ const Fetch_Data = () => {
 
      
     }
+
+   
     
     return (
     <Layout
@@ -123,7 +131,7 @@ const Fetch_Data = () => {
             margin: '0 16px',
           }}
         >
-            <div>HI</div>
+           <div className={styles.text}> Open console Inspect to check data</div>
         </Content>
         
         <Footer/>
