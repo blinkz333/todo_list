@@ -3,7 +3,7 @@ import {
     Layout, 
     Menu
 } from 'antd';
-import {useHistory} from 'react-router-dom'
+import useHistory from 'react-router-dom'
 
 const { Sider } = Layout;
 
