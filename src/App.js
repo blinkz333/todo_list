@@ -10,7 +10,7 @@ const  App = () => {
   return (
     <BrowserRouter >
     <Routes>
-      <Route  exec path="/" element={<Todolist />} />
+      <Route exec path="/todo_list" element={<Todolist />} />
       <Route path="/todo_list/fetch_data" element={<Fetch_Data />} />
     </Routes>
   </BrowserRouter>
