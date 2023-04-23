@@ -3,7 +3,7 @@ import {
     Layout, 
     Menu
 } from 'antd';
-import useHistory from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 
 const { Sider } = Layout;
 
@@ -26,16 +26,16 @@ const items = [
 
 const Sider_Component = ( ) => {
 
-  let history = useHistory()
+  let navigate  = useNavigate ()
    
     const [collapsed, setCollapsed] = useState(false);
     const handleClickMenu = (i) => {
       if(i.key === "1"){
           // window.location.href = '/todo_list'
-          history.push('/todo_list')
+          navigate ('/todo_list')
       }else if (i.key === "2"){
           // window.location.href = '/todo_list/#/fetch_data'
-          history.push('/todo_list/fetch_data')
+          navigate ('/todo_list/fetch_data')
       }
       
   }
