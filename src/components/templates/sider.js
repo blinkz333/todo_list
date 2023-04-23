@@ -28,9 +28,9 @@ const Sider_Component = ( ) => {
     const [collapsed, setCollapsed] = useState(false);
     const handleClickMenu = (i) => {
       if(i.key === "1"){
-          window.location.pathname = '/#/todo_list'
+          window.location.href = '/todo_list'
       }else if (i.key === "2"){
-          window.location.pathname = '/#/fetch_data'
+          window.location.href = '/fetch_data'
       }
       
   }

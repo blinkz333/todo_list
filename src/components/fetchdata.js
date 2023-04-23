@@ -142,5 +142,4 @@ const Fetch_Data = () => {
 
 }
 
-
-export default Fetch_Data;
+export default Fetch_Data
