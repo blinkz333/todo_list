@@ -1,14 +1,16 @@
-import {BrowserRouter,
+import {
+  BrowserRouter,
   Routes,
-  Route} from 'react-router-dom';
+  Route,
+} from 'react-router-dom';
 import Todolist from './components/todolist';
 import Fetch_Data from './components/fetchdata';
 
 const  App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/todo_list'>
     <Routes>
-      <Route path="/todo_list" element={<Todolist />} />
+      <Route  exec path="/" element={<Todolist />} />
       <Route path="/fetch_data" element={<Fetch_Data />} />
     </Routes>
   </BrowserRouter>
