@@ -30,7 +30,7 @@ const Sider_Component = ( ) => {
       if(i.key === "1"){
           window.location.href = '/todo_list'
       }else if (i.key === "2"){
-          window.location.href = '/todo_list/fetch_data'
+          window.location.href = '/todo_list/#/fetch_data'
       }
       
   }
