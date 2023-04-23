@@ -11,7 +11,7 @@ const  App = () => {
     <BrowserRouter >
     <Routes>
       <Route exec path="/todo_list" element={<Todolist />} />
-      <Route path="/todo_list/fetch_data" element={<Fetch_Data />} />
+      <Route path="/fetch_data" element={<Fetch_Data />} />
     </Routes>
   </BrowserRouter>
   );
