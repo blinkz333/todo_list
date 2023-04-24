@@ -76,20 +76,6 @@ const Todolist = () => {
   const [select_value , setSelectValue] = useState(null)
  
     
-
-    // const checkTimeToDel = (items, type) => {
-    //     const newData = [...items];
-    //     newData.splice(0, 1);
-    //     if(type === 1){
-    //         setFruitItem(newData);
-    //     }else{
-    //         setVegItem(newData);
-    //     }
-           
-           
-    //   };
-
-
     useEffect(() => {
         const timer = setInterval(() => {
            if(fruit_item.length > 0){
