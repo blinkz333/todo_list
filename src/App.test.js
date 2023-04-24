@@ -1,4 +1,4 @@
-import { find_Department , findModeAge , generateHair , generateAddress } from './components/libs/globalfunction'
+import { find_Department , findModeAge , generateHair , generateAddress , generateProductType } from './components/libs/globalfunction'
 
 
 describe("test function", () => {
@@ -65,6 +65,15 @@ describe("test function", () => {
 
     const value = generateAddress(data)
     expect(value).toEqual(address_data);
+  });
+
+  it("test generate Product Type",  () => {
+    // mock data
+    const data = "Apple"
+
+
+    const value = generateProductType(data)
+    expect(value).toEqual("Fruit");
   });
 
 

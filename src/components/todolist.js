@@ -15,6 +15,8 @@ import Header from './templates/header'
 import Footer from './templates/footer'
 import Sider from './templates/sider'
 
+import { generateProductType } from './libs/globalfunction';
+
 const { Content } = Layout;
 
 const data =  [
@@ -64,6 +66,8 @@ const data =  [
     },
 ]
 
+
+
 const Todolist = () => {
  
   const [default_data , setDefaultData] = useState(data)
@@ -73,32 +77,37 @@ const Todolist = () => {
  
     
 
-    const checkTimeToDel = (items, type) => {
-        const newData = [...items];
-        newData.splice(0, 1);
-        if(type === 1){
-            setFruitItem(newData);
-        }else{
-            setVegItem(newData);
-        }
+    // const checkTimeToDel = (items, type) => {
+    //     const newData = [...items];
+    //     newData.splice(0, 1);
+    //     if(type === 1){
+    //         setFruitItem(newData);
+    //     }else{
+    //         setVegItem(newData);
+    //     }
            
            
-      };
+    //   };
 
-      useEffect(() => {
+
+    useEffect(() => {
         const timer = setInterval(() => {
-            checkTimeToDel(fruit_item , 1)
-            if(fruit_item.length > 0){
-                checkDefaultData(fruit_item[0])
-            }
+           if(fruit_item.length > 0){
+            const new_data = [...fruit_item]
+            new_data.splice(0,1)
+            setFruitItem(new_data);
+            checkDefaultData(fruit_item[0])
+           }
           }, 5000);
           return () => clearInterval(timer);
     },[fruit_item])
 
     useEffect(() => {
          const timer = setInterval(() => {
-            checkTimeToDel(veg_item , 2)
             if(veg_item.length > 0){
+                const new_data = [...veg_item]
+                new_data.splice(0,1)
+                setVegItem(new_data);
                 checkDefaultData(veg_item[0])
             }
           }, 5000);
@@ -135,7 +144,7 @@ const Todolist = () => {
 
 
     const checkDefaultData = (value) => {
-         const original_data = [...default_data]
+        const original_data = default_data
         const found = original_data.find((item) => item.name === value.name)
         if(found){
             original_data.map((items , index) => {
@@ -157,12 +166,21 @@ const Todolist = () => {
     const onSubmitToTodoBox = () => {
     const fruit_item_obj = [...fruit_item]
     const veg_item_obj = [...veg_item]
-
+    const default_data_obj = [...default_data]
+    
     if(select_value){
-        const find_type = data.find(items => select_value === items.name)
-        if(find_type.type === "Fruit"){
+         const find_type = default_data_obj.find(items => select_value === items.name)
+        if( find_type === undefined ){
+            const type_product = generateProductType(select_value)
+            const obj  =  {name : select_value , type : type_product}
+            if(type_product === "Fruit"){
+                checkDuplicate(fruit_item_obj , obj , 1)
+            }else{
+                checkDuplicate(veg_item_obj , obj , 2)
+            }
+        }else if (find_type.type === "Fruit"){
             checkDuplicate(fruit_item_obj , find_type , 1)
-        }else{
+        }else if(find_type.type === "Vegetable"){
             checkDuplicate(veg_item_obj , find_type , 2)
         }
     }else{

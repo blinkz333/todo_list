@@ -47,6 +47,26 @@ const generateAddress = (obj) => {
 
 }   
 
-export { find_Department , findModeAge , generateHair , generateAddress}
+
+const generateProductType = (value) => {
+
+  const data = {
+      Apple: 'Fruit',
+      Broccoli: 'Vegetable',
+      Mushroom: 'Vegetable',
+      Banana: 'Fruit',
+      Tomato: 'Vegetable',
+      Orange: 'Fruit',
+      Mango: 'Fruit',
+      Pineapple: 'Fruit',
+      Cucumber: 'Vegetable',
+      Watermelon: 'Fruit',
+      Carrot: 'Vegetable',
+  }
+
+  return data[value]
+}
+
+export { find_Department , findModeAge , generateHair , generateAddress , generateProductType}
 
 
