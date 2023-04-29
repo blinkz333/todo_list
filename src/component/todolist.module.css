@@ -1,0 +1,95 @@
+#components-layout-demo-top-side .logo {
+    float: left;
+    width: 120px;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .ant-row-rtl #components-layout-demo-top-side .logo {
+    float: right;
+    margin: 16px 0 16px 24px;
+  }
+
+  .box {
+    width: 80px;
+    height: 60px;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+
+  .text {
+    font-size: 24px;
+    font-family: 'Roboto';
+    font-style: normal;
+    letter-spacing: 1.5px;
+  }
+
+  .footer{
+    text-align: center;
+    background-color: #001529;
+  }
+  
+  .footer .textFooter{
+    color: #F5F5F5;
+  }
+
+  .selectBox {
+    width: 80%;
+  }
+  
+  .select_button{
+    margin-left: 20px;
+  }
+
+  .FruitBox{
+    width: 400px;
+    height: 600px;
+    background-color: #F5F5F5;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+
+  .VegBox{
+    width: 400px;
+    height: 600px;
+    background-color: #F5F5F5;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+
+  .fruit_box_text{
+    background-color: rgb(45, 45, 95);
+    height: 30px;
+    text-align: center;
+    color: white;
+  }
+
+  .fruit_text{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: sans-serif;
+  }
+
+  .veg_box_text{
+    background-color: rgb(138, 197, 90);
+    height: 30px;
+    text-align: center;
+    color: white;
+  }
+
+  .fruit_child{
+    width: 300px;
+    height: 80px;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
