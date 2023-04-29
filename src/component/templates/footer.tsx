@@ -1,7 +1,7 @@
 import {
     Layout, 
 } from 'antd';
-import styles from '../templates/footer.module.css'
+import styles from './footer.module.css'
 
 const { Footer } = Layout;
 

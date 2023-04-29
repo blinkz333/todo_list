@@ -1,4 +1,4 @@
-import { find_Department , findModeAge , generateHair , generateAddress , generateProductType } from './components/libs/globalfunction'
+import { find_Department , findModeAge , generateHair , generateAddress , generateProductType } from './component/libs/globalfunction'
 
 
 describe("test function", () => {

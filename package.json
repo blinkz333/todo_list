@@ -1,5 +1,5 @@
 {
-  "name": "7hunter-test",
+  "name": "7hunter_tsx",
   "homepage": "https://blinkz333.github.io/todo_list",
   "version": "0.1.0",
   "private": true,
@@ -7,16 +7,21 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "antd": "^5.4.4",
-    "axios": "^1.3.6",
     "gh-pages": "^5.0.0",
     "google-protobuf": "^3.21.2",
     "grpc-web": "^1.4.2",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.25",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "antd": "^5.4.6",
+    "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.10.0",
+    "react-router-dom": "^6.11.0",
     "react-scripts": "5.0.1",
     "sweetalert2": "^11.7.3",
+    "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -32,6 +37,7 @@
       "^.+\\.[t|j]s?$": "babel-jest"
     }
   },
+  
   "eslintConfig": {
     "extends": [
       "react-app",
